@@ -106,7 +106,6 @@ fig.show()
 #Hypo 6: Does the price relate to the mileage?
 #code
 sns.set_theme()
-df = pd.read_csv('/content/Car Data.csv')
 sns.lineplot(data=df, x='Price', y='Mileage')
 #Summary: According to the line plot, the cars at the cheapest price seem to have above average mileage. Meanwhile, the pricier cars have below average mileage, and the most expensive cars tend to have a low mileage. Therefore, it seems that there is a loose relationship between price and mileage. However, it doesn't mean that all cheap cars are better than the more expensive ones.
 #Hypo 7:How does the most manufactured vehicle vary over time?

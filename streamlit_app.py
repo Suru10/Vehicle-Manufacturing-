@@ -39,7 +39,7 @@ st.write(df.shape)
 st.write("Basic Statistics")
 st.table(df.describe())
 #info
-df.info()
+# df.info()
 #columns
 st.write("Columns")
 st.write(df.columns)
@@ -115,7 +115,7 @@ fig.show()
 #Summary: According to the bar graph shown, each year the brand comes out with a better version of the same car increasing sales each year.
 
 #BOTTOM PART
-st.divider
+st.divider()
 st.title(
   'Hypothesis 1: How’s the brand of the car related to the price of the vehicle?'
 )
@@ -126,7 +126,7 @@ st.write(
   '  According to the bar graph generated, the brand of the car is strongly related to the price of the vehicle. This is evident in the fact that Toyota is the car brand with the highest prices ($27K aprox each/$300K aprox in total) and both Honda and Ford are the ones with the lowest prices ($22K aprox each/$260K aprox in total). The prices of Chevrolet and Hyundai vehicles are between these two values.'
 )
 st.write()
-st.divider
+st.divider()
 
 st.title(
   'Hypothesis 2: Is there a relation between models and the year of production?'
@@ -137,7 +137,7 @@ fig.show()
 st.write(
   'According to the scatter graph generated, each type of model was produced in a time span of 1-2 years, then stopped, then produced again after 1-3 years. There is no evidence that a car model was produced in a specific year or period of time, but each one was developed at various points without relation or pattern. This illustrates that there is no relation between the model of the car and the year of production.'
 )
-st.divider
+st.divider()
 
 st.title('Hypothesis 3:Does the brand affect the location of distribution?')
 st.subheader('Brand Vs. Location')
@@ -146,7 +146,7 @@ fig.show()
 st.write(
   'The brand seems to have a weak relation to the locatoin of manufacturing, because each brand is manufactured in only 2 cities.'
 )
-st.divider
+st.divider()
 
 st.title(
   "Hypothesis 4: What’s the connection between the model of the car and the mileage?"
@@ -157,7 +157,7 @@ fig.show()
 st.write(
   "The scatter graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage"
 )
-st.divider
+st.divider()
 
 st.title(
   "Hypothesis 5, Does the year of the car's manufacture date relate to its price?"
@@ -168,7 +168,7 @@ fig.show()
 st.write(
   "According to the bar graph shown, the car pirce seems to increase during the year so this proves the hypothesis to be true, that the year and the price of cars are related"
 )
-st.divider
+st.divider()
 
 st.title("Hypothesis 6, Does the price relate to the mileage?")
 st.subheader("Price VS Mileage")
@@ -179,7 +179,7 @@ st.write(
   "According to the line plot, the cars at the cheapest price seem to have above average mileage. Meanwhile, the pricier cars have below average mileage, and the most expensive cars tend to have a low mileage. Therefore, it seems that there is a loose relationship between price and mileage. However, it doesn't mean that all cheap cars are better than the more expensive ones."
 )
 
-st.divider
+st.divider()
 st.title('Conclusion')
 st.write(
   'There are many types of models and brands of cars, and each of them have certain characteristics. For example, the largely known brand Toyota has the highest price rate compared to any of the other brands listed in the dataset, while Honda and Ford have the lowest. A relation found in the dataset is the relation between models and years of production.  Car models were produced for 1-2 years before the brand stopped producing them. Furthermore, one brand has only 2 manufacturers, making each model unique. Adding on to that, each model has a mileage different from others. But as the prices go higher per year, as proven in hypothesis 5, the less mileage the car usually has.'

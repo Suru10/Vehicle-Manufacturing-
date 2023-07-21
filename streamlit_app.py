@@ -78,7 +78,6 @@ st.markdown("---")
 # team 2 -> Kairos, Harvey -> 3 hypothesis
 
 #BOTTOM PART
-st.divider()
 st.header(
   "Hypothesis 1: How’s the brand of the car related to the price of the vehicle?"
 )
@@ -90,8 +89,9 @@ st.plotly_chart(fig1, use_container_width=True)
 st.write(
   "According to the bar graph generated, the brand of the car is strongly related to the price of the vehicle. This is evident in the fact that Toyota is the car brand with the highest prices ($27K aprox each/$300K aprox in total) and both Honda and Ford are the ones with the lowest prices ($22K aprox each/$260K aprox in total). The prices of Chevrolet and Hyundai vehicles are between these two values. "
 )
+st.markdown("---")
 st.header(
-  "Hypothesis 1: Is there a relation between models and the year of production?"
+  "Hypothesis 2: Is there a relation between models and the year of production?"
 )
 fig2 = px.scatter(df, x="Model", y="Year", color="Location")
 fig2.update_layout(title_text="Relation between model and year of production", xaxis_title="Model",yaxis_title="Year")
@@ -101,13 +101,11 @@ st.write(
 )
 st.markdown("---")
 
-st.divider()
-
 st.title('Hypothesis 3:Does the brand affect the location of distribution?')
 st.subheader('Brand Vs. Location')
 fig3 = px.scatter(df, x="Brand", y="Location")
 fig3.update_layout(title_text="Relation Between Brand and Location of Distribution",
-                    xaxis_title="Brand"
+                    xaxis_title="Brand",
                     yaxis_title='Location')
 st.plotly_chart(fig3, use_container_width=True)
 st.write(
@@ -132,13 +130,13 @@ st.title(
 st.subheader("Year Vs Price")
 fig5 = px.bar(df, x="Year", y="Price")
 fig5.update_layout(title_text="Relation Between Year and Price",
-                    xaxis_title='Year'
+                    xaxis_title='Year',
                     yaxis_title='Price')
 st.plotly_chart(fig5, use_container_width=True)
 st.write(
   "According to the bar graph shown, the car pirce seems to increase during the year so this proves the hypothesis to be true, that the year and the price of cars are related"
 )
-st.divider()s
+st.divider()
 
 st.title("Hypothesis 6, Does the price relate to the mileage?")
 st.subheader("Price VS Mileage")

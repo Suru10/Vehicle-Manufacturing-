@@ -113,16 +113,16 @@ st.write(
 )
 st.divider()
 
-st.title(
+st.header(
   "Hypothesis 4: What’s the connection between the model of the car and the mileage?"
 )
-st.subheader("Model Vs location")
-fig = px.histogram(df, x="Model", y="Mileage", color="Location")
-st.plotly_chart
+fig3 = px.histogram(df, x="Model", y="Mileage", color="Year")
+fig3.update_layout(title_text="Relation between model and mileage", xaxis_title="Model",yaxis_title="Mileage")
+st.plotly_chart(fig3, use_container_width=True)
 st.write(
-  "The scatter graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage"
+  "The scatter graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage. "
 )
-st.divider()
+st.markdown("---")
 
 st.title(
   "Hypothesis 5, Does the year of the car's manufacture date relate to its price?"
@@ -140,8 +140,9 @@ st.divider()
 
 st.title("Hypothesis 6, Does the price relate to the mileage?")
 st.subheader("Price VS Mileage")
-sns.set_theme()
-sns.lineplot(data=df, x='Price', y='Mileage')
+fig6 = plt.figure(figsize=(10, 4))
+sns.lineplot(x="Price", y="Mileage", data=df)
+st.pyplot(fig6)
 st.write(
   "According to the line plot, the cars at the cheapest price seem to have above average mileage. Meanwhile, the pricier cars have below average mileage, and the most expensive cars tend to have a low mileage. Therefore, it seems that there is a loose relationship between price and mileage. However, it doesn't mean that all cheap cars are better than the more expensive ones."
 )

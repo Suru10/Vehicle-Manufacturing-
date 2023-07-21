@@ -103,7 +103,7 @@ st.write(
 )
 st.markdown("---")
 
-st.title('Hypothesis 3:Does the brand affect the location of distribution?')
+st.title('Hypothesis 3: Does the brand affect the location of distribution?')
 st.subheader('Brand Vs. Location')
 fig3 = px.scatter(df, x="Brand", y="Location")
 fig3.update_layout(
@@ -112,12 +112,12 @@ fig3.update_layout(
   yaxis_title='Location')
 st.plotly_chart(fig3, use_container_width=True)
 st.write(
-  'The brand seems to have a weak relation to the locatoin of manufacturing, because each brand is manufactured in only 2 cities.'
+  'The brand seems to have a weak relation to the location of manufacturing, because each brand is manufactured in only 2 cities.'
 )
 st.divider()
 
 st.header(
-  "Hypothesis 4: What’s the connection between the model of the car and the mileage?"
+  "Hypothesis 4: What is the connection between the model of the car and the mileage?"
 )
 fig3 = px.histogram(df, x="Model", y="Mileage", color="Year")
 fig3.update_layout(title_text="Relation between model and mileage",
@@ -125,7 +125,7 @@ fig3.update_layout(title_text="Relation between model and mileage",
                    yaxis_title="Mileage")
 st.plotly_chart(fig3, use_container_width=True)
 st.write(
-  "The scatter graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage. "
+  "The bar graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage. "
 )
 st.markdown("---")
 

@@ -94,7 +94,9 @@ st.header(
   "Hypothesis 2: Is there a relation between models and the year of production?"
 )
 fig2 = px.scatter(df, x="Model", y="Year", color="Location")
-fig2.update_layout(title_text="Relation between model and year of production", xaxis_title="Model",yaxis_title="Year")
+fig2.update_layout(title_text="Relation between model and year of production",
+                   xaxis_title="Model",
+                   yaxis_title="Year")
 st.plotly_chart(fig2, use_container_width=True)
 st.write(
   "According to the scatter graph generated, each type of model was produced in a time span of 1-2 years, then stopped, then produced again after 1-3 years. There is no evidence that a car model was produced in a specific year or period of time, but each one was developed at various points without relation or pattern. This illustrates that there is no relation between the model of the car and the year of production. "
@@ -104,9 +106,10 @@ st.markdown("---")
 st.title('Hypothesis 3:Does the brand affect the location of distribution?')
 st.subheader('Brand Vs. Location')
 fig3 = px.scatter(df, x="Brand", y="Location")
-fig3.update_layout(title_text="Relation Between Brand and Location of Distribution",
-                    xaxis_title="Brand",
-                    yaxis_title='Location')
+fig3.update_layout(
+  title_text="Relation Between Brand and Location of Distribution",
+  xaxis_title="Brand",
+  yaxis_title='Location')
 st.plotly_chart(fig3, use_container_width=True)
 st.write(
   'The brand seems to have a weak relation to the locatoin of manufacturing, because each brand is manufactured in only 2 cities.'
@@ -117,7 +120,9 @@ st.header(
   "Hypothesis 4: What’s the connection between the model of the car and the mileage?"
 )
 fig3 = px.histogram(df, x="Model", y="Mileage", color="Year")
-fig3.update_layout(title_text="Relation between model and mileage", xaxis_title="Model",yaxis_title="Mileage")
+fig3.update_layout(title_text="Relation between model and mileage",
+                   xaxis_title="Model",
+                   yaxis_title="Mileage")
 st.plotly_chart(fig3, use_container_width=True)
 st.write(
   "The scatter graph generated reflects that the Fusion car model is the one with the highest mileage (50K miles aprox each/150K miles aprox in total) while the Kona, Spark, and Camaro car models are the ones with the lowest mileage (35K miles in total). The other models are between both values. This illustrates a relation between car model and mileage. "
@@ -130,8 +135,8 @@ st.title(
 st.subheader("Year Vs Price")
 fig5 = px.bar(df, x="Year", y="Price")
 fig5.update_layout(title_text="Relation Between Year and Price",
-                    xaxis_title='Year',
-                    yaxis_title='Price')
+                   xaxis_title='Year',
+                   yaxis_title='Price')
 st.plotly_chart(fig5, use_container_width=True)
 st.write(
   "According to the bar graph shown, the car pirce seems to increase during the year so this proves the hypothesis to be true, that the year and the price of cars are related"
